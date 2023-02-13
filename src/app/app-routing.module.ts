@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { BodyComponent } from './body/body.component';
+import { DirectivasComponent } from './directivas/directivas.component';
 
 const routes: Routes = [
     
-  {path: 'body', component:BodyComponent}
+  {path: 'home', component: BodyComponent,},
+
+  {path: 'directivas', component:DirectivasComponent}
 
 ];
 
