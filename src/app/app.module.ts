@@ -11,6 +11,10 @@ import { MateriaComponent } from './materia/materia.component';
 import { MateriasService } from './services/materias.service';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
+import { PaisesComponent } from './paises/paises.component';
+import { PaisTarjetaComponent } from './pais-tarjeta/pais-tarjeta.component';
+import { PaisDetalleComponent } from './pais-detalle/pais-detalle.component';
+import { PaisesService } from './services/paises.service';
 
 const ROUTES: Routes = [
   {path: 'home', component: BodyComponent,},
@@ -18,6 +22,10 @@ const ROUTES: Routes = [
   {path: 'directivas', component: DirectivasComponent,},
 
   {path: 'materias', component: MateriasComponent,},
+
+  {path: 'paises', component: PaisesComponent,},
+
+  {path: 'pais/:id', component: PaisDetalleComponent,},
 
   {path: '**', pathMatch: 'full', redirectTo: 'home',},
 ];
@@ -30,6 +38,9 @@ const ROUTES: Routes = [
     MateriasComponent,
     MateriaComponent,
     HeaderComponent,
+    PaisesComponent,
+    PaisTarjetaComponent,
+    PaisDetalleComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +49,7 @@ const ROUTES: Routes = [
     HttpClientModule,
   ],
   exports: [RouterModule],
-  providers: [MateriasService],
+  providers: [MateriasService, PaisesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

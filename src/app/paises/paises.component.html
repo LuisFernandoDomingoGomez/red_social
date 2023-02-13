@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row">
+        <h1>Paises</h1>
+        
+        <hr/>
+        <div class="col-4" *ngFor="let pais of paises">
+        <app-pais-tarjeta [pais]="pais"></app-pais-tarjeta>
+        </div>
+    </div>
+</div>
