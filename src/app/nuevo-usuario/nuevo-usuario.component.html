@@ -8,11 +8,17 @@
                         <br>
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" formControlName="nombre">
+                            <input type="nombre" class="form-control" formControlName="nombre" [class]="getFormato('nombre')">
+                            <div class="invalid-feedback">
+                                {{ getErrorMessage('nombre') }}
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="apellidos" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" formControlName="apellidos">
+                            <input type="apellidos" class="form-control" formControlName="apellidos" [class]="getFormato('apellidos')">
+                            <div class="invalid-feedback">
+                                {{ getErrorMessage('apellidos') }}
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="genero" class="form-label">Genero</label>
@@ -31,24 +37,39 @@
                         </div>
                         <div class="mb-3">
                             <label for="correo" class="form-label">Email</label>
-                            <input type="email" class="form-control" formControlName="correo">
+                            <input type="email" class="form-control" formControlName="correo" [class]="getFormato('correo')">
+                            <div class="invalid-feedback">
+                                {{ getErrorMessage('correo') }}
+                            </div>
                         </div>
                         <h3>Direccion</h3>
                         <div class="mb-3">
                             <label for="calle" class="form-label">Calle</label>
-                            <input type="text" class="form-control" formControlName="calle">
+                            <input type="text" class="form-control" formControlName="calle" [class]="getFormato('calle')">
+                            <div class="invalid-feedback">
+                                {{ getErrorMessage('calle') }}
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="ciudad" class="form-label">Ciudad</label>
-                            <input type="text" class="form-control" formControlName="ciudad">
+                            <input type="text" class="form-control" formControlName="ciudad" [class]="getFormato('ciudad')">
+                            <div class="invalid-feedback">
+                                {{ getErrorMessage('ciudad') }}
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="estado" class="form-label">Estado</label>
-                            <input type="text" class="form-control" formControlName="estado">
+                            <input type="text" class="form-control" formControlName="estado" [class]="getFormato('estado')">
+                            <div class="invalid-feedback">
+                                {{ getErrorMessage('estado') }}
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="codigoPostal" class="form-label">Codigo Postal</label>
-                            <input type="text" class="form-control" formControlName="codigoPostal">
+                            <input type="text" class="form-control" formControlName="codigoPostal" [class]="getFormato('codigoPostal')">
+                            <div class="invalid-feedback">
+                                {{ getErrorMessage('codigoPostal') }}
+                            </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </form>
